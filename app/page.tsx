@@ -1,11 +1,12 @@
 'use client'
 
+import Header from '@/app/components/Header'
 import Ice from '@/app/components/Ice'
 
 export default function Home() {
     return (
-        <main>
-            <h1 className="text-7xl">Eisdielen Check</h1>
+        <main className="flex flex-col gap-4">
+            <Header />
             <Ice />
         </main>
     )
