@@ -1,20 +1,12 @@
 import { fetchIceData } from '@/app/api/fetchIceData'
+import { IceType } from '@/app/types/types'
 import { useEffect, useState } from 'react'
-
-type IceType = {
-    id: number
-    name: string
-    stadt: string
-    bewertung: number
-    lieblingssorte: string
-}
 
 const Ice = () => {
     const [iceData, setIceData] = useState<IceType[]>([])
     useEffect(() => {
         const loadData = async () => {
             const data = await fetchIceData()
-            console.log(data)
             setIceData(data)
         }
         loadData()
@@ -28,7 +20,7 @@ const Ice = () => {
                         key={item.id}
                         className="outline outline-2 outline-zinc-50 w-full max-w-64 p-4 rounded-md"
                     >
-                        <div>{item.name}</div>
+                        <h2 className="text-2xl">{item.name}</h2>
                         <div>{item.stadt}</div>
                         <div>{item.bewertung} Sterne</div>
                         <div>Empfehlung des Hauses: {item.lieblingssorte}</div>

@@ -1,3 +1,5 @@
+import { IceType } from '../types/types'
+
 export const fetchIceData = async () => {
     try {
         const response = await fetch('/api/eisdielen', {
@@ -11,10 +13,10 @@ export const fetchIceData = async () => {
             console.log('error', response.status)
         }
 
-        const data = await response.json()
+        const data: IceType[] = await response.json()
         return data
     } catch (error) {
         console.log(error)
-        return []
+        return [] as IceType[]
     }
 }
