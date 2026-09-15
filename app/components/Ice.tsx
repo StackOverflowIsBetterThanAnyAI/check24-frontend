@@ -31,7 +31,7 @@ const Ice = () => {
                         <div>{item.name}</div>
                         <div>{item.stadt}</div>
                         <div>{item.bewertung} Sterne</div>
-                        <div>{item.lieblingssorte}</div>
+                        <div>Empfehlung des Hauses: {item.lieblingssorte}</div>
                     </li>
                 )
             })}
