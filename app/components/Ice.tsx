@@ -21,12 +21,12 @@ const Ice = () => {
     }, [])
 
     return iceData?.length ? (
-        <ul className="m-4">
+        <ul className="m-4 flex flex-col gap-4">
             {iceData.map((item) => {
                 return (
                     <li
                         key={item.id}
-                        className="outline outline-2 outline-zinc-50 w-full max-w-64 p-4"
+                        className="outline outline-2 outline-zinc-50 w-full max-w-64 p-4 rounded-md"
                     >
                         <div>{item.name}</div>
                         <div>{item.stadt}</div>
