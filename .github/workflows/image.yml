@@ -1,7 +1,7 @@
 name: Publish Frontend Image
 on:
     push:
-        branches: [master]
+        branches: [main]
 
 jobs:
     Publish_Frontend_Image:
