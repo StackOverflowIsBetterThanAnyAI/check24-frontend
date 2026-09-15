@@ -1,6 +1,6 @@
 export const fetchIceData = async () => {
     try {
-        const response = await fetch('http://localhost:8000/eisdielen', {
+        const response = await fetch('/api/eisdielen', {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',
